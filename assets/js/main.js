@@ -15,18 +15,15 @@ const play = () => {
     document.querySelector('#output').innerHTML = 'lol get memed';
   }
   round++;
-  console.log(round);
 };
 
 const spin = () => {
   let randSpins = Math.floor(Math.random() * chambers.length * 3);
   let mod = randSpins % chambers.length;
-  console.log(mod);
   for (let i = 0; i < mod; i++) {
     chambers.push(chambers.shift());
   }
   round = 0;
-  console.log(chambers, round);
 };
 
 const setUp = (max) => {
@@ -43,4 +40,3 @@ const setUp = (max) => {
 };
 
 setUp(6);
-console.log(chambers);
