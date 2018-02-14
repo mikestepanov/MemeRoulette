@@ -8,7 +8,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=electronlogo.icns --prune=true --out=release-builds"
+    "compile": "npm run compile-mac && npm run compile-linux",
+    "compile-mac": "electron-packager . MemeRoulette --overwrite --platform=darwin --arch=x64 --icon=assets/icons/electron.icns --prune=true --out=release-builds",
+    "compile-win": "electron-packager . MemeRoulette --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/electron.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "compile-linux": "electron-packager . MemeRoulette --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/electron.png --prune=true --out=release-builds"
   },
   "dependencies": {},
   "devDependencies": {
