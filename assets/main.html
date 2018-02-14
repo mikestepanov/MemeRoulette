@@ -7,9 +7,16 @@
   </head>
   <body>
     <h1>MemeRoulette</h1>
-    <h2 class="warning">Warning</h2>
-    <h2 class="warning">This app will actually delete your stuff if you lose!!!</h2>
-    <h2>Caution is advised.</h2>
-    <input type="button" id="submit" value="OK, I understand." />
+    <div class="intro">
+      <h2 class="warning">Warning</h2>
+      <h2 class="warning">This app will actually delete your stuff if you lose!!!</h2>
+      <h2>Caution is advised.</h2>
+      <input type="button" class="submit" value="OK, I understand." onclick="enterGame()"/>
+    </div>
+    <div class="game">
+      <input type="button" class="play" value="play" onclick="play()"/>
+      <h3 id="output"></h3>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
