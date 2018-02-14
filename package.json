@@ -1,0 +1,17 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "electron app",
+  "repository": "https://github.com/mikestepanov",
+  "author": "Mike Stepanov",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^11.0.1"
+  }
+}
