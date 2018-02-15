@@ -12,7 +12,9 @@ const play = () => {
     document.querySelector('#output').innerHTML = 'You are lucky. For now.';
   } else {
     document.querySelector('#output').className = 'memed';
-    document.querySelector('#output').innerHTML = 'lol get memed';
+    document.querySelector('#output').innerHTML = 'lol get memed!!! <br /> Please sit back and relax while your important files get deleted.';
+    document.querySelector('#play').onclick = '';
+    document.querySelector('#spin').onclick = '';
   }
   round++;
   console.log(round, chambers[round]);
