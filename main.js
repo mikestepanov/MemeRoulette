@@ -46,11 +46,5 @@ const mainMenuTemplate = [
 ];
 
 ipcMain.on('getMemed', (event, arg) => {
-    lethal();
-    console.log('memed');
-});
-
-// Listen for async message from renderer process
-ipcMain.on('getMemed', (event, arg) => {
-    lethal();
+  lethal();
 });

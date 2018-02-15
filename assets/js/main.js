@@ -11,6 +11,7 @@ const play = () => {
     document.querySelector('#output').className = 'lucky';
     document.querySelector('#output').innerHTML = 'You are lucky. For now.';
   } else {
+    getMemed();
     document.querySelector('#output').className = 'memed';
     document.querySelector('#output').innerHTML = 'lol get memed!!! <br /> Please sit back and relax while your important files get deleted.';
     document.querySelector('#play').onclick = '';

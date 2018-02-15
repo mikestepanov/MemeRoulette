@@ -1,5 +1,5 @@
-var {ipcRenderer} = require('electron').remote;
+const {ipcRenderer} = require('electron');
 
-ipcRenderer('getMemed', 1);
-
-console.log('gg');
+const getMemed = () => {
+  ipcRenderer.send('getMemed');
+};
