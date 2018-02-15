@@ -15,20 +15,24 @@ const play = () => {
     document.querySelector('#output').innerHTML = 'lol get memed';
   }
   round++;
+  console.log(round, chambers[round]);
 };
 
 const spin = () => {
-  let randSpins = Math.floor(Math.random() * chambers.length * 3);
+  let randSpins = rand(chambers.length * 3);
+  console.log('randSpins', randSpins);
   let mod = randSpins % chambers.length;
   for (let i = 0; i < mod; i++) {
     chambers.push(chambers.shift());
   }
   round = 0;
+  console.log(chambers, round);
 };
 
 const setUp = (max) => {
   round = 0;
-  let idx = Math.floor(Math.random() * max);
+  let idx = rand(max);
+  console.log('idx', idx);
   chambers = [];
   for (let i = 0; i < max; i++) {
     if (i !== idx) {
@@ -39,4 +43,9 @@ const setUp = (max) => {
   }
 };
 
+const rand = (max) => {
+  return Math.floor(Math.random() * max);
+}
+
 setUp(6);
+console.log(chambers, round);
