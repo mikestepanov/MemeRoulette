@@ -1,10 +1,9 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
-const { exec } = require('child_process');
 
-const {app, BrowserWindow, Menu} = electron;
-
+const {app, BrowserWindow, Menu, ipcMain} = electron;
+const lethal = require('./lethal.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -30,7 +29,7 @@ app.on('ready', function() {
 // Create menu template
 const mainMenuTemplate = [
   {
-    label: 'File',
+    label: 'MemeRoulette',
     submenu: [
       {
         label: 'Quit',
@@ -45,3 +44,13 @@ const mainMenuTemplate = [
     label: 'About'
   }
 ];
+
+ipcMain.on('getMemed', (event, arg) => {
+    lethal();
+    console.log('memed');
+});
+
+// Listen for async message from renderer process
+ipcMain.on('getMemed', (event, arg) => {
+    lethal();
+});
