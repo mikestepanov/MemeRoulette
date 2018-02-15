@@ -7,7 +7,7 @@ const enterGame = () => {
 };
 
 const play = () => {
-  if (chambers[round]) {
+  if (!chambers[round]) {
     document.querySelector('#output').className = 'lucky';
     document.querySelector('#output').innerHTML = 'You are lucky. For now.';
   } else {
