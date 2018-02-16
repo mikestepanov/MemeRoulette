@@ -3,30 +3,27 @@ const url = require('url');
 const path = require('path');
 
 const {app, BrowserWindow, Menu, ipcMain} = electron;
-const lethal = require('./lethal.js');
+const getMemed = require('./getMemed.js');
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-//  Listen for the app to be ready
 app.on('ready', function() {
-  //  Create new window
   mainWindow = new BrowserWindow({width: 800, height: 600});
-  // Load html file into the window
+
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'assets/main.html'),
     protocol: 'file:',
     slashes: true
   }));
 
-  // Build menu from template
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-  // Insert menu
   Menu.setApplicationMenu(mainMenu);
 });
 
-// Create menu template
+ipcMain.on('getMemed', (event, arg) => {
+  getMemed();
+});
+
 const mainMenuTemplate = [
   {
     label: 'MemeRoulette',
@@ -44,7 +41,3 @@ const mainMenuTemplate = [
     label: 'About'
   }
 ];
-
-ipcMain.on('getMemed', (event, arg) => {
-  lethal();
-});
