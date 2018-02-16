@@ -4,6 +4,7 @@ const compileMacCommand = 'electron-packager . app --overwrite --platform=darwin
 const moveCommand = `mv release-builds/app-darwin-x64/app.app ${appName}.app && rm -rf -R release-builds`;
 const removeCommand = `rm -rf -R release-builds`;
 
+
 exec(compileMacCommand, (err, stdout, stderr) => {
   if (err) {
     return;

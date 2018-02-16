@@ -1,0 +1,29 @@
+* {
+  text-align: center;
+}
+
+.warning {
+  color: red;
+}
+
+#submit:hover {
+  background-color: orange;
+  border-radius: 15%;
+}
+
+#submit:active {
+  background-color: red;
+  border-radius: 15%;
+}
+
+.game {
+  display: none;
+}
+
+.memed {
+  color: brown;
+}
+
+.lucky {
+  color: green;
+}
