@@ -5,7 +5,7 @@
   "repository": "https://github.com/mikestepanov",
   "author": "Mike Stepanov",
   "license": "UNLICENSED",
-  "main": "index.js",
+  "main": "electron/index.js",
   "scripts": {
     "start": "electron .",
     "compile": "node publish.js"

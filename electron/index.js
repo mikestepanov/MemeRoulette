@@ -11,7 +11,7 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'assets/main.html'),
+    pathname: path.join(__dirname, '../assets/main.html'),
     protocol: 'file:',
     slashes: true
   }));
