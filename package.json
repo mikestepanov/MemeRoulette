@@ -5,12 +5,13 @@
   "repository": "https://github.com/mikestepanov",
   "author": "Mike Stepanov",
   "license": "UNLICENSED",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "electron .",
     "compile": "node publish.js"
   },
   "dependencies": {
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "electron": "~1.7.8",
