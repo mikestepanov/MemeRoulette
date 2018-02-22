@@ -14,7 +14,7 @@ const server = app.listen(port, () => {
 const socket = require('socket.io');
 const io = socket.listen(server);
 
-io.on('connection', (socket) => {
+io.on('connection', function(socket) {
   console.log('a user connected');
   socket.on('disconnect', () => {
     console.log('user disconnected');
@@ -23,5 +23,3 @@ io.on('connection', (socket) => {
     console.log(`a str ${str} recieved`);
   });
 });
-
-module.exports = io;
