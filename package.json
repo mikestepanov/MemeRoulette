@@ -4,7 +4,7 @@
   "description": "electron app",
   "repository": "https://github.com/mikestepanov",
   "author": "Mike Stepanov",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "electron/index.js",
   "scripts": {
     "start": "electron .",
