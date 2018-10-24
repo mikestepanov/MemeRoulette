@@ -8,17 +8,16 @@
   "main": "electron/index.js",
   "scripts": {
     "start": "electron .",
-    "dev": "npm run server-dev",
     "compile": "node electron/publish.js",
-    "server-dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js"
   },
   "dependencies": {
-    "express": "^4.16.2",
-    "socket.io": "^2.0.4"
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
-    "electron": "~1.7.8",
-    "electron-packager": "^11.0.1",
+    "electron": "^3.0.5",
+    "electron-packager": "^12.2.0",
     "nodemon": "^1.15.1"
   }
 }
