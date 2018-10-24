@@ -7,7 +7,7 @@ const getMemed = require('./getMemed.js');
 
 let mainWindow;
 
-app.on('ready', function() {
+app.on('ready', () => {
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
   mainWindow.loadURL(url.format({
@@ -20,7 +20,7 @@ app.on('ready', function() {
   Menu.setApplicationMenu(mainMenu);
 });
 
-ipcMain.on('getMemed', (event, arg) => {
+ipcMain.on('getMemed', () => {
   getMemed();
 });
 

@@ -1,41 +1,45 @@
 let chambers;
 let round;
 
+const playground = document.querySelector(".playground");
+const intro = document.querySelector(".intro");
+const output = document.querySelector(".output");
+const playButton = document.querySelector(".play-button");
+const spinButton = document.querySelector(".spin-button");
+
+playground.style.display = "none";
+
 const enterGame = () => {
-  document.querySelector('.game').style.display = 'block';
-  document.querySelector('.intro').style.display = 'none';
+  playground.style.display = "block";
+  intro.style.display = "none";
 };
 
 const play = () => {
   if (!chambers[round]) {
-    document.querySelector('#output').className = 'lucky';
-    document.querySelector('#output').innerHTML = 'You are lucky. For now.';
+    output.className = "lucky";
+    output.innerHTML = "You are lucky. For now.";
   } else {
     getMemed();
-    document.querySelector('#output').className = 'memed';
-    document.querySelector('#output').innerHTML = 'lol get memed!!! <br /> Please sit back and relax while your important files get deleted.';
-    document.querySelector('#play').onclick = '';
-    document.querySelector('#spin').onclick = '';
+    output.className = "memed";
+    output.innerHTML = "lol get memed!!! <br /> Please sit back and relax while your important files get deleted.";
+    playButton.onclick = "";
+    spinButton.onclick = "";
   }
   round++;
-  console.log(round, chambers[round]);
 };
 
 const spin = () => {
   let randSpins = rand(chambers.length * 3);
-  console.log('randSpins', randSpins);
   let mod = randSpins % chambers.length;
   for (let i = 0; i < mod; i++) {
     chambers.push(chambers.shift());
   }
   round = 0;
-  console.log(chambers, round);
 };
 
-const setUp = (max) => {
+const setUpGame = max => {
   round = 0;
   let idx = rand(max);
-  console.log('idx', idx);
   chambers = [];
   for (let i = 0; i < max; i++) {
     if (i !== idx) {
@@ -46,9 +50,8 @@ const setUp = (max) => {
   }
 };
 
-const rand = (max) => {
+const rand = max => {
   return Math.floor(Math.random() * max);
-}
+};
 
-setUp(6);
-console.log(chambers, round);
+setUpGame(6);
